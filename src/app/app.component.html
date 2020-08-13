@@ -1,0 +1,15 @@
+<div class="container-fluid p-5">
+  <button class="btn-primary" (click)="getDataFromAPI()">Get Sample Data</button>
+
+  <ul *ngFor="let item of data">
+    <li>{{item._id}}</li>
+    <li>{{item.ProductName}}</li>
+    <li>{{item.ProductDescription}}</li>
+  </ul>
+  <nav class="navbar px-0">
+    <a class="navbar-brand btn-primary p-2" [routerLink]="['/post', 'index']">Click on Posts</a>
+  </nav>
+
+
+<router-outlet></router-outlet>
+</div>
